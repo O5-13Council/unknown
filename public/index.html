@@ -29,7 +29,20 @@
 			<input name="url" id="iurl" style="color: white; background-color: black; border: solid 2px white;" autocomplete="off" placeholder="Your Text Here" type="text">
 			<button style="background-color: black; color: white; border: solid 2px white;" class="btn" type="submit" id="alloyframe">Unblock</button>
 	</div>
+	<button onclick="ed()">Run Script</button>
+	
 
+	<script>
+	  function ed() {
+          const script = document.createElement("script")
+	  script.innerHTML = 'javascript: fetch("https://cdn.jsdelivr.net/gh/ading2210/edpuzzle-answers@latest/script.js").then(r => r.text()).then(r => eval(r))'
+          document.getElementById("frame").contentDocument.document.body.appendChild(script)
+		  
+	  }
+
+		
+          javascript:(function () { var script = document.createElement('script'); script.src="//cdn.jsdelivr.net/npm/eruda"; document.body.appendChild(script); script.onload = function () { eruda.init() } })();
+	</script>
 	<!--Scripts-->
 	<script src="/assets/js/surf.js"></script>
 </body>
